@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}My Django Apps{% endblock %}
+
+{% block content %}
+<header>
+    <h1>🚀 My Django Projects</h1>
+    <p>All applications in one place</p>
+</header>
+
+<div class="grid">
+    {% for app in apps %}
+    <div class="card">
+        <h2>{{ app.icon }} {{ app.name }}</h2>
+        <p>{{ app.description }}</p>
+
+        {% if app.login_required and not request.user.is_authenticated %}
+            <a href="/login/" class="btn">Login to Access</a>
+        {% else %}
+            <a href="{{ app.url }}" class="btn">Open App</a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

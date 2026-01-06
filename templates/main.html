@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Django Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 50px 20px;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        header p {
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 10px 24px;
+            background: #ffffff;
+            color: #764ba2;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🚀 My Django Projects</h1>
+        <p>A collection of apps built with Django</p>
+    </header>
+
+    <div class="grid">
+
+        <!-- StudyBuddy -->
+        <div class="card">
+            <h2>StudyBuddy</h2>
+            <p>A collaborative learning platform with chat rooms and user roles.</p>
+            <a href="/studybuddy/">Open App</a>
+        </div>
+
+        <!-- Expense Tracker -->
+        <div class="card">
+            <h2>Expense Tracker</h2>
+            <p>Track daily expenses, monthly summaries, and smart insights.</p>
+            <a href="/expenses/">Open App</a>
+        </div>
+
+        <!-- Chat App -->
+        <div class="card">
+            <h2>Community Chat</h2>
+            <p>Real-time chat app for community discussions.</p>
+            <a href="/chat/">Open App</a>
+        </div>
+
+        <!-- Add more apps here -->
+
+    </div>
+
+    <footer>
+        © 2026 | Built with Django ❤️
+    </footer>
+
+</div>
+
+</body>
+</html>
