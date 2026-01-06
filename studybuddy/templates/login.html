@@ -90,15 +90,11 @@
     <form method="post">
         <!-- Django CSRF -->
         {% csrf_token %}
-
+        {% for field in form %}
         <div class="input-group">
-            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder= required>
         </div>
-
-        <div class="input-group">
-            <input type="password" name="password" placeholder="Password" required>
-        </div>
-
+        {% endfor %}
         <button type="submit" class="btn">Login</button>
     </form>
 
